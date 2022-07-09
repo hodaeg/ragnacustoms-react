@@ -1,6 +1,6 @@
 import react from 'react'
-import Hero from './Hero'
-import HomeContent from './HomeContent'
+import Hero from './Components/Hero'
+import HomeContent from './Components/HomeContent'
 
 export default function Home () {
     return (

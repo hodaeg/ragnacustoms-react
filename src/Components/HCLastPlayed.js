@@ -1,5 +1,5 @@
 import react, {useEffect, useState} from 'react'
-import SongCardThird from './SongCardThird'
+import SongCardThird from './Components/SongCardThird'
 import axios from 'axios'
 
 export default function HCLastPlayed () {
