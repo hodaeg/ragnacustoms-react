@@ -1,13 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Catamaran', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg,#171717,#2b2b2b 20%,#2b2b2b 80%,#171717);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  background: linear-gradient(180deg, #202020 22.22%, #242424 100%);
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(255, 255, 255, .08);
+  width: 100vw;
+}
+
+.nav-rc {
+  align-content: center;
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-items-container {
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.nav-items {
+  color: white;
+  display: flex;
+  list-style: none;
+}
+
+.nav-items > li {
+  color: white;
+  cursor: pointer;
+  padding-left: 1vw;
+  font-weight: 600;
+}
+
+.nav-items > li:hover {
+  color: gold;
+}
+
+.hero-rc {
+  background-image: url(./rcheader.jpg);
+  background-size: cover;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding-block: 10vh;
+}
+
+.hero-search-rc {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+  color: white;
+}
+
+.search {
+  all: unset;
+  background: #F9F9F9;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  width: 25vw;
+  min-width: 300px;
+  border-radius: .5em;
+  padding-left: 2vw;
+  font-size: 1em;
+  margin-right: 0;
+  border-radius: .5em 0 0 .5em;
+  box-shadow: inset 0px -1px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid #2b2b2b;
+}
+
+.logo {
+  max-height: 5vh;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchButton {
+  all: unset;
+  font-size: 1em;
+  background-color: #235886;
+  border-radius: 0 .5em .5em 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-shadow: inset 0px 0px 17px rgba(0, 0, 0, 0.19);
+  font-weight: 500;
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  border-right: 1px solid #2b2b2b;
+  cursor: pointer;
+}
+
+.maincontent-container-rc {
+  display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.maincontent-item-container {
+ width: 32%;
+ color: white;
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+
+.song-card-third {
+  background-color: #42424265;
+  border-radius: .5em;
+  border: 1px solid #262626;
+  display: flex;
+  height: 8vh;
+  box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.25);
+  overflow: hidden;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.song-card-third:hover {
+  background-color: #212121;
+  box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.45);
+  border: 1px solid #424242;
+}
+
+.song-card-third > img {
+  width: auto;
+  height: 100%;
+}
+
+.maincontent-item-recentsongs {
+
+}
+
+.maincontent-item-lastplayed {
+
+}
+
+.songInfo {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.songInfo > p {
+  margin-bottom: -4px;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.songInfoSong {
+  font-weight: 700;
+  font-size: calc(1em);
+  color: #e4ae09;
+}
+
+.songInfoMapper {
+    color: #f4505d;
+    font-size: .8em;
+}
+
+.songInfoArtist {
+  color: rgb(214, 214, 214);
+  font-size: calc(.9em);
+}
+
+.SongCardMapper {
+  color: #f4505d;
+  font-size: .8em;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  width: 100px;
+  gap: 5px;
+  text-overflow: clip;
+}
+
+.SongCardMapper > p {
+  margin: 0;
+}
+
+.difficultyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.difficultyDot {
+  background-color: green;
+  border-radius: 1em;
+  font-size: .7em;
+  text-align: center;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  width: 20px;
+}
+
+#medium {
+  background-color: rgb(205, 150, 0);
+}
+
+#hard {
+  background-color: rgb(114, 0, 0);
+}
+
+.vote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 960px) {
+  .maincontent-container-rc {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: unset;
+  }
+
+  .maincontent-item-container {
+    width: 90%;
+    max-width: unset;
+  }
+
+  .nav-rc {
+    overflow: hidden;
+  }
+
+  .hero-rc {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-block: 4vh;
+  }
+
+  .search {
+    min-width: 250px;
+  }
 }
