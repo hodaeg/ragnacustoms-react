@@ -1,5 +1,4 @@
 import react from 'react'
-import headerimg from './rcheader.jpg'
 
 export default function Hero () {
     return (

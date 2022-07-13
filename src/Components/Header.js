@@ -1,19 +1,20 @@
 import react from 'react'
-import rclogo from './rclogo.png'
+import rclogo from '../rclogo.png'
+import { Link } from 'react-router-dom'
 
 export default function Header () {
     return (
         <nav>
             <div className="nav-rc">
-            <img src={rclogo} className="logo" />
+                <Link to ="/"><img src={rclogo} className="logo"/></Link>
                 <div className="nav-items-container">
                     <ul className="nav-items">
-                        <li>Getting Started</li>
-                        <li>Song Library</li>
+                        <button><Link to ="/submitsong">Submit Song</Link></button>
+                        <li><Link to ="/songlibrary">Song Library</Link></li>
                         <li>Leaderboard</li>
                         <li>Mappers</li>
                         <li>Apps</li>
-                        <li>Login</li>
+                        <li><Link to="/login">Login</Link></li>
                     </ul>
                 </div>
             </div>

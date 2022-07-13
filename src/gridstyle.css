@@ -1,0 +1,40 @@
+.ag-theme-alpine {
+    --ag-borders: none;
+    --ag-borders-row: solid 1px;
+    --ag-row-border-color: #00000059;
+    --ag-odd-row-background-color: #373737;
+    --ag-background-color: rgba(249, 245, 227, 0);
+    --ag-header-background-color: #1f1f1f;
+    --ag-alpine-active-color: gold;
+    --ag-foreground-color: gold;
+    --ag-data-color: white;
+    --ag-row-hover-color: #424242;
+    --ag-grid-size: 5px;
+    --ag-row-height: 50px;
+    --ag-range-selection-border-color: #ffffff00;
+    --ag-border-radius: 5px;
+  }
+
+  .Downloads {
+    border-radius: 5px;
+  }
+
+  .coverArt {
+    height: 95%;
+    border-radius: .2em;
+    margin-left: auto;
+  }
+
+  .rows {
+    border-radius: .2em;
+  }
+
+  .songTitle {
+    color: gold;
+    font-weight: 500;
+  }
+
+  .mapper {
+    color: #f4505d;
+    font-weight: 500;
+  }

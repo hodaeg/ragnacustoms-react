@@ -1,34 +1,34 @@
-import react, {useState} from 'react'
-import atbart from './OIP.jpg'
+import react, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 
 export default function SongCardThird (props) {
+    const {Artist, deleteSong, Mapper, Votes, Slug, SongTitle, AlbumArt, id}=props
     
-    const [voteCast, setVoteCast] = useState("null");
-    
+    const [voteCast, setVoteCast] = useState(Votes);
+    console.log(Votes, voteCast);
+    useEffect(()=>{
+        setVoteCast(Votes);
+    },[])
+
     function handleClickUp() {
-        setVoteCast(props.Votes + "1")
+        setVoteCast(voteCast + 1)
     }
     
-    // Random Cover Art Generator (not needed)
-    /*const artUrl = function randomNumber() {
-        const srcNum = Math.floor(Math.random() * (900 - 1) + 1);
-        const coverSrc = (srcNum.toString());
-        const artUrl = "https://ragnacustoms.com/covers/" + coverSrc + ".jpg";
-        return artUrl;
-    }*/
-    
+    function handleClickDown() {
+        setVoteCast(voteCast - 1)
+    }
 
-    const AlbumArt = props.AlbumArt;
-    const AlbumArtLink = `https://ragnacustoms.com/covers/` + AlbumArt + `.jpg`;
+    const AlbumArtID = AlbumArt;
+    const AlbumArtLink = `https://ragnacustoms.com/covers/${AlbumArtID}.jpg`;
 
     return (
-        <div className="song-card-third">
+        <div className="song-card-third" onClick={()=>deleteSong(id)} onMouseEnter={()=>{console.log({props})}}>
                 <img src={AlbumArtLink} onError={(e)=>{ if (e.target.src !=={AlbumArtLink}) 
                 { e.target.onerror = null; e.target.src="https://ragnacustoms.com/apps/logo.png"; } }}  />
                 <div className="songInfo">
-                    <p className="songInfoSong">{props.SongTitle}</p>
-                    <p className="songInfoArtist">{props.Artist}</p>
-                    <p className="songInfoMapper">{props.Mapper}</p>
+                    <p className="songInfoSong"><Link to={`song/${Slug}`}>{SongTitle}</Link></p>
+                    <p className="songInfoArtist">{Artist}</p>
+                    <p className="songInfoMapper">{Mapper}</p>
                 </div>
                     <div className="difficultyContainer">
                         <div className="difficultyDot">3</div>
@@ -37,8 +37,8 @@ export default function SongCardThird (props) {
                     </div>
                 <div className="vote">
                     <i class="fa-solid fa-chevron-up" onClick={handleClickUp}></i>
-                    <span>{props.Votes}</span>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <span>{voteCast}</span>
+                    <i class="fa-solid fa-chevron-down" onClick={handleClickDown}></i>
                 </div>
         </div>
     )

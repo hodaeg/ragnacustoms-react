@@ -1,0 +1,107 @@
+.song-card-created {
+    background-color: #1e1e1e;
+    border-radius: .5em;
+    border: 1px solid #121212;
+    width: 400px;
+    height: auto;
+    min-height: 200px;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.25);
+  }
+
+  .song-card-created-covercontainer {
+    height: 90px;
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.35) 60.13%), url(https://th.bing.com/th/id/OIP.q1IDsP2FMLj52vh5E6DvGgHaGV?pid=ImgDet&rs=1);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    filter: drop-shadow(0px 10px 12px rgba(0, 0, 0,     0.20));
+    border-bottom: 1px black;
+  }
+  
+  .song-card-created-covertextcontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .song-card-created-covertext {
+    color: white;
+    margin: 0;
+  }
+
+  .song-card-created-covertext > p {
+    line-height: 0;
+  }
+  
+  .song-card-created-covertext > h1 {
+    color: gold;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: .7em;
+    margin: 0;
+  }
+  
+  .genreChip {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: gold;
+    color: black;
+    font-size: .8em;
+    font-weight: 700;
+    height: fit-content;
+    border-radius: .5em;
+    line-height: 0;
+  }
+  
+  .songcard-created-infocontainer {
+    display: flex;
+    margin-left: 10px;
+    gap: 25px;
+    color: #9A9A9A;
+    line-height: 0;
+  }
+  
+  .descriptionContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(207, 207, 207);
+    line-height: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  
+  
+  .song-card-createdcontainer {
+    max-width: fit-content;
+  }
+
+  .descriptionContainer > p {
+    all: unset;
+  }
+  
+  .song-card-created-buttonscontainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .song-card-created-buttonscontainer > button {
+    all: unset;
+    color: rgb(255, 86, 86);
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    border-radius: 1em;
+  }
+
+  .song-card-created-buttonscontainer > button:hover {
+    transition: 250ms;
+    background-color:rgba(154, 154, 154, 0.121);
+    border-radius: 1em;
+  }

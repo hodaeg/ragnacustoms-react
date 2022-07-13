@@ -21,7 +21,18 @@ nav {
   background: linear-gradient(180deg, #202020 22.22%, #242424 100%);
   border-bottom: 1px solid #000000;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(255, 255, 255, .08);
-  width: 100vw;
+  height: 60px;
+}
+
+.layoutGrid {
+  display: grid; 
+
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  
+  gap: 0px;
+  height: 100vh;
+  
 }
 
 .nav-rc {
@@ -46,6 +57,10 @@ nav {
   list-style: none;
 }
 
+a {
+  all: unset;
+}
+
 .nav-items > li {
   color: white;
   cursor: pointer;
@@ -60,7 +75,6 @@ nav {
 .hero-rc {
   background-image: url(./rcheader.jpg);
   background-size: cover;
-  width: 100vw;
   display: flex;
   flex-direction: row;
   padding-block: 10vh;
@@ -91,7 +105,10 @@ nav {
 }
 
 .logo {
-  max-height: 5vh;
+  position: absolute;
+  top: 5px;
+  height: 50px;
+  cursor: pointer;
 }
 
 .searchBar {
@@ -128,6 +145,7 @@ nav {
  display: flex;
  flex-direction: column;
  gap: 5px;
+ line-height: .7;
 }
 
 .song-card-third {
@@ -153,6 +171,12 @@ nav {
 .song-card-third > img {
   width: auto;
   height: 100%;
+}
+
+.song-card-created:hover {
+  background-color: #212121;
+  box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.45);
+  border: 1px solid #424242;
 }
 
 .maincontent-item-recentsongs {
@@ -217,21 +241,22 @@ nav {
 }
 
 .difficultyDot {
-  background-color: green;
-  border-radius: 1em;
+  background-color: rgb(0, 162, 0);
+  border-radius: .6em;
   font-size: .7em;
   text-align: center;
   font-weight: 600;
   color: rgb(255, 255, 255);
-  width: 20px;
+  width: 15px;
+  padding-block: 4px;
 }
 
 #medium {
-  background-color: rgb(205, 150, 0);
+  background-color: rgb(164, 120, 0);
 }
 
 #hard {
-  background-color: rgb(114, 0, 0);
+  background-color: rgb(176, 0, 0);
 }
 
 .vote {
@@ -239,6 +264,215 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-left: 5px;
+}
+
+.angry-grid {
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  
+  grid-template-areas: 
+ 'Picture logo-header'
+ 'Picture Form'
+ 'Picture Form';
+  height: 100%;
+  gap: 0px;
+}
+ 
+#item-0 {
+
+  background-color: #5d9a51; 
+  grid-area: Picture;
+  background-image: linear-gradient(90deg, rgba(43, 43, 43, 1) 0%, rgba(238, 130, 238, 0) 100%),
+url("https://survive-vr.fr/wp-content/uploads/2020/03/Salle-jeu-realite-virtuelle-nantes-vr-survive.png");
+background-size: cover;
+background-position: center;
+z-index: -1;
+box-shadow: inset -21px 0px 21px -2px rgba(0,0,0,0.25);
+border-right-style: solid;
+border-color: #232323;
+}
+#item-1 {
+  display: flex;
+  justify-content: center;
+  grid-area: Form;
+}
+#item-2 {
+  grid-area: logo-header; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  color:#ffdf28;
+}
+
+.footerContainer {
+  display: flex;
+  Background-color: #242424;
+  align-items: center;
+  width: 100%;
+  height: 78px;
+}
+
+select {
+  background-color: #3a3a3a;
+  color: rgb(224, 224, 224);
+  border-bottom: 4px solid gold;
+  border-left: 1px solid gold;
+  border-right: 1px solid gold;
+  border-top: 1px solid gold;
+  padding-block: 12px;
+  padding-left: 20px;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  font-weight:600;
+  font-size: .9em;
+}
+
+.footerItems {
+  Display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  color: white;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.footerItems > i {
+  color: #f4505d;
+}
+
+.gridContainer {
+  width: auto;
+  height: calc(100vh - 60px);
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 50%;
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitForm > p {
+  line-height: .5em;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.submitForm > button {
+  margin-top: 2vh;
+}
+
+.submitForm > H1 {
+  line-height: .8em;
+}
+
+.button {
+  background-color: rgb(0, 51, 98);
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  padding-left: 0px;
+  box-shadow: inset 0px 0px 10px 0px rgba(7, 99, 192, 0.483);
+  color:#ffffff;
+  font-size: 1.3em;
+  border: 1px solid #395fb0;
+}
+
+#submit {
+  border-radius: .5em;
+  padding-block: 1vh;
+}
+
+button {
+  all: unset;
+  background-color: gold;
+  text-align: center;
+  border-radius: 3em;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgb(62, 58, 0);
+  padding-left: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 20px;
+  font-size: 1em;
+}
+
+.button:hover {
+  box-shadow: inset 0px 0px 30px 0px rgba(68, 148, 228, 0.631);
+  border: 1px solid #829fdd;
+}
+
+.button:active {
+  background-color: #395fb0;
+}
+
+input {
+ all: unset;
+ background-color: #3a3a3a;
+ color: white;
+ font-weight: 500;
+ border-bottom: 4px solid gold;
+ border-left: 1px solid gold;
+ border-right: 1px solid gold;
+ border-top: 1px solid gold;
+ padding-block: 10px;
+ padding-left: 20px;
+ border-top-left-radius: .5em;
+ border-top-right-radius: .5em;
+ caret-color: gold;
+}
+
+::placeholder {
+  color: rgb(199, 199, 199);
+  font-weight: 300;
+}
+
+.slContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5vh;
+  color: white;
+}
+
+.ssContainer {
+  display: flex;
+  width: 1200px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ssForm {
+  display: flex;
+  border-right: 1px solid rgba(255, 255, 255, 0.179);
+  padding-right: 30px;
+  box-shadow: 15px 0px 74px -41px rgba(0,0,0,0.47);
+  min-width: 330px;
+}
+
+.ssCardList {
+  display: flex;
+  gap: 2vh;
+  margin-top: 2vh;
+  flex-wrap: wrap;
+  margin-left: 5vh;
+  align-content: flex-start;
 }
 
 @media only screen and (max-width: 960px) {
