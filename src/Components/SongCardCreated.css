@@ -105,3 +105,9 @@
     background-color:rgba(154, 154, 154, 0.121);
     border-radius: 1em;
   }
+
+  @media only screen and (max-width: 960px) {
+    .song-card-created {
+        width: auto;
+    }
+  }

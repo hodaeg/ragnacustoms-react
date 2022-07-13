@@ -320,13 +320,11 @@ select {
   background-color: #3a3a3a;
   color: rgb(224, 224, 224);
   border-bottom: 4px solid gold;
-  border-left: 1px solid gold;
-  border-right: 1px solid gold;
-  border-top: 1px solid gold;
-  padding-block: 12px;
+  padding-block: 14px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   padding-left: 20px;
-  border-top-left-radius: .5em;
-  border-top-right-radius: .5em;
   font-weight:600;
   font-size: .9em;
 }
@@ -391,7 +389,6 @@ select {
 }
 
 #submit {
-  border-radius: .5em;
   padding-block: 1vh;
 }
 
@@ -399,7 +396,7 @@ button {
   all: unset;
   background-color: gold;
   text-align: center;
-  border-radius: 3em;
+  border-radius: .2em;
   font-weight: 700;
   cursor: pointer;
   color: rgb(62, 58, 0);
@@ -423,21 +420,18 @@ input {
  all: unset;
  background-color: #3a3a3a;
  color: white;
+ border-radius: .2em;
  font-weight: 500;
  border-bottom: 4px solid gold;
- border-left: 1px solid gold;
- border-right: 1px solid gold;
- border-top: 1px solid gold;
  padding-block: 10px;
  padding-left: 20px;
- border-top-left-radius: .5em;
- border-top-right-radius: .5em;
  caret-color: gold;
 }
 
 ::placeholder {
   color: rgb(199, 199, 199);
   font-weight: 300;
+  font-style: italic;
 }
 
 .slContainer {
@@ -481,7 +475,8 @@ input {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: unset;
+    max-width: unset; 
+    margin-bottom: 2em;
   }
 
   .maincontent-item-container {
@@ -499,7 +494,89 @@ input {
     padding-block: 4vh;
   }
 
+  .hero-search-rc {
+    width: auto;
+  }
+
   .search {
     min-width: 250px;
   }
+
+  .footerContainer {
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  .footerIconContainer {
+    display: flex;
+    gap: 20%;
+    color:#f4505d;
+    margin-left: -15px;
+  }
+
+  .footerItems {
+    flex-direction: column;
+    line-height: 1em;
+    text-align: center;
+    gap: unset;
+  }
+
+  .ssContainer {
+    width: auto;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .ssForm {
+    all: unset;
+  }
+
+  .ssCardList {
+    flex-direction: column;
+    margin-left: unset;
+    margin-bottom: 2em;
+  }
+
+  .angry-grid {
+    display: grid; 
+    grid-template-rows:.25fr 1fr;
+    grid-template-columns: 1fr;
+    
+    grid-template-areas: 
+    'logo-header'
+    'Form';
+    height: 100%;
+    gap: 0px;
+  }
+
+  #item-2 {
+    background-image: linear-gradient(0deg, rgba(43, 43, 43, 0.799) 100%, rgba(238, 130, 238, 0) 100%),
+  url("https://survive-vr.fr/wp-content/uploads/2020/03/Salle-jeu-realite-virtuelle-nantes-vr-survive.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100%;
+  margin-left: unset;
+  margin-right: unset;
+  line-height: 1em;
+  }
+
+  .loginForm {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+
+  #item-0 {
+    all: unset;
+  }
+
+  .slContainer {
+    width: 100vw;
+    max-width: unset;
+  }
+
 }

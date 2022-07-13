@@ -78,13 +78,13 @@ export default function SubmitSong () {
                     <form className="submitForm" onSubmit={handleSubmit(onSubmit)}>
                         <h1>Submit Created Song</h1>
                         <p>Artist Name</p>
-                        <input type="text" placeholder="Artist Name" {...register("artistTitle", {required: true, maxLength: 20})} />
+                        <input type="text" placeholder="Enter Artist's Name" {...register("artistTitle", {required: true, maxLength: 20})} />
                         <p>Song Title</p>
-                        <input type="text" placeholder="Song Title" {...register("songName", {required: true, maxLength: 30})} />
+                        <input type="text" placeholder="Enter Song Name" {...register("songName", {required: true, maxLength: 30})} />
                         <p>Genre</p>
-                        <input type="text" placeholder="Genre" {...register("genre", {required: true, maxLength: 15})} />
+                        <input type="text" placeholder="Enter Genre Type" {...register("genre", {required: true, maxLength: 15})} />
                         <p>Difficulty</p>
-                        <select {...register("difficulty", { required: true })}>
+                        <select {...register("1-10", { required: true })}>
                             <option value="Easy 1">Easy 1</option>
                             <option value="Easy 2">Easy 2</option>
                             <option value="Easy 3">Easy 3</option>
@@ -97,11 +97,11 @@ export default function SubmitSong () {
                             <option value="Hard 10">Hard 10</option>
                         </select>
                         <p>BPM</p>
-                        <input type="number" placeholder="BPM" {...register("bpm", {required: true, max: 250, min: 50})} />
+                        <input type="number" placeholder="Max 250 bpm" {...register("bpm", {required: true, max: 250, min: 50})} />
                         <p>Song Length</p>
-                        <input type="text" placeholder="Song Length (00:00)" {...register("songLength", {required: true, maxLength:5})} />
+                        <input type="text" placeholder="00:00" {...register("songLength", {required: true, maxLength:5})} />
                         <p>Description</p>
-                        <input type="text" placeholder="Description" {...register("description", { maxLength: 400})} />
+                        <input type="text" placeholder="Enter Description" {...register("description", { maxLength: 400})} />
                         <button className="button" id="submit" type="submit">Submit Song</button>
                     </form>
             </div>
