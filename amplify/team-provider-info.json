@@ -1,23 +1,23 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-ragnacustomsreact-dev-235846-authRole",
-      "UnauthRoleArn": "arn:aws:iam::449973811739:role/amplify-ragnacustomsreact-dev-235846-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::449973811739:role/amplify-ragnacustomsreact-dev-235846-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-ragnacustomsreact-dev-235846-deployment",
-      "UnauthRoleName": "amplify-ragnacustomsreact-dev-235846-unauthRole",
-      "StackName": "amplify-ragnacustomsreact-dev-235846",
-      "StackId": "arn:aws:cloudformation:us-east-2:449973811739:stack/amplify-ragnacustomsreact-dev-235846/7caa3fe0-0268-11ed-9d6d-02f730246202",
-      "AmplifyAppId": "d2mg88mlp8fb6q"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d2mg88mlp8fb6q",
-          "type": "manual"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-ragnacustomsreact-dev-235846-authRole",
+            "UnauthRoleArn": "arn:aws:iam::449973811739:role/amplify-ragnacustomsreact-dev-235846-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::449973811739:role/amplify-ragnacustomsreact-dev-235846-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-ragnacustomsreact-dev-235846-deployment",
+            "UnauthRoleName": "amplify-ragnacustomsreact-dev-235846-unauthRole",
+            "StackName": "amplify-ragnacustomsreact-dev-235846",
+            "StackId": "arn:aws:cloudformation:us-east-2:449973811739:stack/amplify-ragnacustomsreact-dev-235846/7caa3fe0-0268-11ed-9d6d-02f730246202",
+            "AmplifyAppId": "d2mg88mlp8fb6q"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2mg88mlp8fb6q",
+                    "type": "cicd"
+                }
+            }
         }
-      }
     }
-  }
 }
