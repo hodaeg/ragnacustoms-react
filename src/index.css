@@ -579,4 +579,15 @@ input {
     max-width: unset;
   }
 
+  .nav-items-container {
+    display: none;
+  }
+
+  .logo {
+    Width: 10em;
+    height: auto;
+    top: 10px;
+    margin-left: 2%;
+  }
+
 }
